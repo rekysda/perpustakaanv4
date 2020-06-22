@@ -41,7 +41,9 @@ class Opac extends CI_Controller
           $limit_search_item = $this->db->get_where('options', ['name' => 'limit_search_item'])->row_array();
           $limit = $limit_search_item['value'];
 
-            $cariall = $this->input->post('cariall');
+          $cariall = $this->input->get('cariall');
+          $data['cariall']=$cariall;
+
             $judul = $this->input->post('judul');
             $pengarang = $this->input->post('pengarang');
             $penerbit = $this->input->post('penerbit');
