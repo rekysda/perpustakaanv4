@@ -15,7 +15,9 @@
         <div class="inner-form">
           <div class="input-field second-wrap">
             <input name="cariall" id="cariall" type="text" placeholder="Judul / ISBN / Pengarang / Penerbit"/>
+          <?php  if (options('signin_opac') == '1') {?>
            Anda Login Sebagai <i><a href="<?= base_url('auth/logoutmember/')?>"><?= $this->session->userdata('nama'); ?> Logout</a></i>
+          <?php }?>
           </div>
           <div class="input-field third-wrap">
             <button class="btn-search" type="submit">

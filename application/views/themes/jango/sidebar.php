@@ -12,7 +12,10 @@
 							<button class="btn c-theme-btn c-theme-border c-btn-square" type="submit">Search!</button><br>
 							</span>
 						</div>
-					</form>Anda Login Sebagai <i><a href="<?= base_url('auth/logoutmember/')?>"><?= $this->session->userdata('nama'); ?> Logout</a></i>
+					</form>
+					<?php  if (options('signin_opac') == '1') {?>
+					Anda Login Sebagai <i><a href="<?= base_url('auth/logoutmember/')?>"><?= $this->session->userdata('nama'); ?> Logout</a></i>
+					<?php } ?>
 					<div class="c-content-ver-nav">
 						<div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
 							<h3 class="c-font-bold c-font-uppercase">HASIL PENCARIAN</h3>

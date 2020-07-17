@@ -85,6 +85,15 @@
                 <?= form_error('limit_search_item', '<span class="help-block">', '</span>') ?>
               </div>
             </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Signin OPAC</label>
+              <div class="col-sm-10">
+                <select name="option[signin_opac]" class="form-control <?= form_error('signin_opac') ? 'is-invalid' : '' ?>">
+                  <option value="1" <?= options('signin_opac') == 1 ? 'selected' : null ?>>Aktif</option>
+                  <option value="0" <?= options('signin_opac') == 0 ? 'selected' : null ?>>Tidak Aktif</option>
+                </select>
+              </div>
+            </div>
           <!-- /.box-body -->
           <div class="box-footer">
             <input type="submit" name="submit" value="Save Changes" class="btn btn-primary">

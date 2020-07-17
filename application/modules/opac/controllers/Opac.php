@@ -7,7 +7,9 @@ class Opac extends CI_Controller
   public function __construct()
     {
         parent::__construct();
+        if (options('signin_opac') == '1') {
         is_member_in();
+         }
     }
 
 	public function index()
