@@ -73,7 +73,7 @@
 <form method="post" action="<?= base_url('keanggotaan/importanggotacsv'); ?>" enctype ="multipart/form-data"class="form-inline">
 <div class="form-group">
 <label for="name">Demileter*</label>
-<input class="form-control" type="text" name="demileter" value="<?= set_value('demileter', isset($demileter) ? $demileter : ';'); ?>" />
+<input class="form-control" type="text" name="demileter" value="<?= set_value('demileter', isset($demileter) ? $demileter : ','); ?>" />
 <?= form_error('demileter', '<span class="help-block">', '</small>'); ?>
 <input type="file" name="anggotacsv" accept="text/csv" class="form-control"><br>
 <input type="submit" name="import" class="btn btn-success" value="Import from CSV" />
