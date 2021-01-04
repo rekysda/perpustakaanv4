@@ -12,7 +12,7 @@ class Transaksi extends CI_Controller
     is_logged_in();
   }
   public function transaksi1()
-  {
+  { 
     $data['title'] = 'Transaksi';
     $data['user'] = $this->db->get_where('user', ['email' =>
     $this->session->userdata('email')])->row_array();

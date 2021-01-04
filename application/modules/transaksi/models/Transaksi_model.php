@@ -15,7 +15,7 @@ class Transaksi_model extends CI_Model
   {
           $this->db->where('id', $id);
           $this->db->delete('pp_gmd');
-
+ 
   }
   public function get_gmd_ById($id){
           return $this->db->get_where('pp_gmd', ['id' => $id])->row_array();
